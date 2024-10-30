@@ -6,7 +6,7 @@
         <span v-if="selectedTags.length > 0" class="ml-2 bg-white text-blue-500 px-2 rounded-full">
           {{ selectedTags.length }}
         </span>
-        <Filter size="17" />
+        <Filter :size="17" />
 
       </Button>
       <Button variant="filter" v-if="selectedTags.length > 0" @click="clearTags">
