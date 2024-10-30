@@ -31,6 +31,8 @@ const props = defineProps({
 const variantClass = computed(() => ({
   'bg-blue text-white  hover:brightness-90 font-medium': props.variant === 'primary',
   'border border-blue rounded-md text-blue font-medium hover:bg-gray-50': props.variant === 'secondary',
+  'text-sm text-gray-500 hover:text-gray-700': props.variant === 'filter',
+
 }));
 
 const sizeClass = computed(() => ({
