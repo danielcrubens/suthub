@@ -1,6 +1,8 @@
 <template>
   <div class="container mx-auto my-8 px-4">
-    <h1 class="text-3xl text-blue-600  font-bold mb-4 px-5">Galeria de Receitas</h1>
+    <div class="flex  w-full items-center mb-4 px-5">
+      <Header title="Galeria de Receitas"/> 
+    </div>
 
     <div v-if="isLoading" class="text-center py-8">
       <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
@@ -21,7 +23,7 @@
       <div v-if="filteredRecipes.length === 0" class="text-center flex mx-auto justify-center py-8">
         <div class="text-gray-500 text-lg">
           Nenhuma receita encontrada com as tags selecionadas.
-          <img class="h-80 w-full"src="@/assets/images/searching.svg" alt="Imagem de pesquisa">
+          <img class="h-80 w-full" src="@/assets/images/searching.svg" alt="Imagem de pesquisa">
         </div>
       </div>
 
@@ -40,8 +42,7 @@
                 <p>Tempo de cozimento: {{ recipe.cookTimeMinutes }} min</p>
                 <p>Dificuldade: {{ recipe.difficulty }}</p>
                 <div class="mt-1">
-                  <span v-for="tag in recipe.tags" :key="tag"
-                    class="tag">
+                  <span v-for="tag in recipe.tags" :key="tag" class="tag">
                     {{ tag }}
                   </span>
                 </div>
@@ -70,8 +71,7 @@
                       </div>
                     </div>
                     <div class="mt-4">
-                      <span v-for="tag in recipe.tags" :key="tag"
-                        class="tag">
+                      <span v-for="tag in recipe.tags" :key="tag" class="tag">
                         {{ tag }}
                       </span>
                     </div>
@@ -98,9 +98,7 @@
                 </div>
               </div>
 
-              <DialogClose
-                class="absolute top-4 right-4 p-2"
-                aria-label="Fechar">
+              <DialogClose class="absolute top-4 right-4 p-2" aria-label="Fechar">
                 <X color="red" class="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
               </DialogClose>
             </DialogContent>
@@ -112,10 +110,12 @@
 </template>
 
 <style>
-p, h2{
+p,
+h2 {
   @apply text-blue-600;
 }
-.tag{
+
+.tag {
   @apply inline-block bg-gray-200 rounded-md px-3 py-1 text-blue-600 text-sm font-medium mr-2;
 }
 </style>
@@ -126,6 +126,7 @@ import { useApi } from '@/composables/useApi'
 import { onMounted } from 'vue'
 import TagFilter from '@/components/TagFilter.vue'
 import { Salad, X } from 'lucide-vue-next';
+import Header from '~/components/Header.vue';
 
 import {
   DialogRoot,
