@@ -34,3 +34,24 @@ export interface ViaCEPResponse {
   siafi: string;
   erro?: boolean;
 }
+export interface User {
+  id: number
+  firstName: string
+  lastName: string
+  birthDate: string
+  gender: string
+  image: string
+  address: {
+    coordinates: {
+      lat: number
+      lng: number
+    }
+  }
+}
+
+export interface ApiResponse {
+  users: User[]
+  total: number
+  skip: number
+  limit: number
+}
