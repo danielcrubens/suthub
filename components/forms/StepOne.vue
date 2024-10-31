@@ -41,11 +41,6 @@
   </div>
 </template>
 
-<style scoped>
-label {
-  @apply block text-sm font-medium text-blue-600;
-}
-</style>
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';

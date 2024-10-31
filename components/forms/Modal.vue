@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="modal">
     <DialogRoot :open="show" @close="handleClose">
       <DialogOverlay class="fixed  inset-0 z-[99] bg-black bg-opacity-50 backdrop-blur-sm" />
 
@@ -49,20 +49,6 @@
     </DialogRoot>
   </div>
 </template>
-
-<style scoped>
-h3 {
-  @apply text-blue font-semibold;
-}
-
-span {
-  @apply font-medium text-gray-500;
-}
-
-p {
-  @apply text-gray-500;
-}
-</style>
 
 <script setup lang="ts">
 import { computed } from 'vue';

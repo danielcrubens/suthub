@@ -62,12 +62,15 @@ import ProgressBar from '@/components/forms/ProgressBar.vue';
 import { ArrowRight } from 'lucide-vue-next';
 import Button from '@/components/forms/ui/Buttons.vue';
 import { User, Dog, Home } from 'lucide-vue-next';
+import stepOneImage from '@/public/steps.svg'
+import stepTwoImage from '@/public/pet.svg'
+import stepThreeImage from '@/public/address.svg'
 
 
 const stepImages = {
-  1: '..//public/steps.svg',
-  2: '..//public/pet.svg',
-  3: '..//public/address.svg',
+  1: stepOneImage,
+  2: stepTwoImage,
+  3: stepThreeImage,
 };
 // Propriedade calculada para a imagem da etapa atual
 const currentStepImage = computed(() => {
@@ -84,7 +87,7 @@ const formData = reactive<PetFormData>({
   birthDate: '',
   fullName: '',
   cpf: '',
-  petType: 'cão',
+  petType: '',
   petBreed: '',
   customBreed: '',
   monthlyIncome: 0,

@@ -74,14 +74,6 @@
   </div>
 </template>
 
-<style>
-td {
-  @apply whitespace-nowrap text-center px-4 py-2 text-gray-700;
-}
-th {
-  @apply whitespace-nowrap px-4 py-2 font-medium text-blue-600;
-}
-</style>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
