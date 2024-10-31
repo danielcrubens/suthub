@@ -4,8 +4,6 @@ export const useApi = () => {
       const data = await $fetch('https://dummyjson.com/recipes', {
         method: 'GET',
       });
-      
-      console.log('Recipes data:', data);
       return data;
     } catch (error) {
       console.error('Error fetching recipes:', error);

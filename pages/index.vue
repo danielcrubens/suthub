@@ -130,7 +130,6 @@ const validateCurrentStep = async () => {
 };
 
 const handleNext = async () => {
-  console.log('Current form data:', formData);
 
   const isValid = await validateCurrentStep();
   if (!isValid) {
@@ -158,7 +157,6 @@ const handleBack = () => {
 };
 
 const handleConfirm = () => {
-  console.log('Form submitted:', formData);
   router.push('/recipes');
 };
 

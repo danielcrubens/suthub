@@ -7,8 +7,6 @@ export const useCep = () => {
       const cleanCep = cep.replace(/\D/g, '')
       const response = await $fetch<ViaCEPResponse>(`https://viacep.com.br/ws/${cleanCep}/json/`)
 
-      console.log('CEP data:', response)
-
       if (response.erro) {
         throw new Error('CEP não encontrado')
       }
