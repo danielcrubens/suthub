@@ -18,7 +18,7 @@ const emit = defineEmits(['update:modelValue']);
 
 const inputClasses = computed(() => {
   return [
-    'mt-1 block w-full rounded-md border border-[1px] p-2.5 shadow-sm focus:outline-none',
+    'mt-1 block w-full rounded-md border border-[1px] p-2.5 shadow-sm focus:outline-none text-gray-500',
     props.variant === 'primary' ? 'focus:border-blue-500 focus:ring-1 focus:shadow-md focus:ring-blue-500 ' : '',
   ].join(' ');
 

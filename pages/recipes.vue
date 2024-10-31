@@ -38,9 +38,9 @@
 
               <div class="flex flex-col justify-between p-2 ">
                 <h2 class="lg:text-xl text-lg font-bold">{{ recipe.name }}</h2>
-                <p>Tempo de preparo: {{ recipe.prepTimeMinutes }} min</p>
-                <p>Tempo de cozimento: {{ recipe.cookTimeMinutes }} min</p>
-                <p>Dificuldade: {{ recipe.difficulty }}</p>
+                <p> <span class ="font-medium">Tempo de preparo:</span> {{ recipe.prepTimeMinutes }} min</p>
+                <p> <span class ="font-medium">Tempo de cozimento:</span> {{ recipe.cookTimeMinutes }} min</p>
+                <p> <span class ="font-medium">Dificuldade:</span> {{ recipe.difficulty }}</p>
                 <div class="mt-1">
                   <span v-for="tag in recipe.tags" :key="tag" class="tag">
                     {{ tag }}
@@ -65,8 +65,8 @@
                   </DialogTitle>
                   <div class=" space-y-5">
                     <div class="flex gap-2 items-center">
-                      <p>Porções:</p>
-                      <div class="flex">
+                      <p class="font-medium">Porções:</p>
+                      <div class="flex flex-wrap">
                         <Salad v-for="n in recipe.servings" :key="n" class="w-5 h-5 text-green-500" />
                       </div>
                     </div>
@@ -109,9 +109,8 @@
   </div>
 </template>
 
-<style>
-p,
-h2 {
+<style scoped  lang="css">
+ p, h2, span{
   @apply text-blue-600;
 }
 h3 {
@@ -119,6 +118,9 @@ h3 {
 }
 ol{
   @apply list-decimal pl-5 mb-4;
+}
+li{
+  @apply text-gray-500;
 }
 .tag {
   @apply inline-block bg-gray-200 rounded-md px-3 py-1 text-blue-600 text-sm font-medium mr-2;

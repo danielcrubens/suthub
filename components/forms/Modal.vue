@@ -50,6 +50,19 @@
   </div>
 </template>
 
+<style scoped lang="css">
+ h3 {
+  @apply text-blue font-semibold;
+}
+ span {
+  @apply font-medium text-gray-500;
+}
+
+ p {
+  @apply text-gray-500;
+}
+</style>
+
 <script setup lang="ts">
 import { computed } from 'vue';
 import type { PetFormData } from '~/types';

@@ -63,8 +63,8 @@
             </td>
           </tr>
           <tr v-if="filteredUsers.length === 0">
-            <td colspan="5" class="px-4 py-28 text-center text-gray-500">
-              Nenhum usuário encontrado com os filtros selecionados.
+            <td colspan="5" class="px-4 py-28 text-center text-lg">
+              <p class="text-gray-500">Nenhum usuário encontrado com os filtros selecionados.</p>
               <img class="mx-auto h-80 w-full" src="@/assets/images/searching.svg" alt="">
             </td>
           </tr>
@@ -73,7 +73,14 @@
     </div>
   </div>
 </template>
-
+ <style scoped lang="css">
+td {
+  @apply whitespace-nowrap text-center px-4 py-2 text-gray-700;
+}
+th {
+  @apply whitespace-nowrap px-4 py-2 font-medium text-blue-600;
+}
+</style>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
