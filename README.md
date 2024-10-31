@@ -6,7 +6,7 @@ dados de uma API pública ( https://dummyjson.com/ ) para apresentação em tela
 além de solicitar um cadastro offline para fins de validação de dados.
 
 
- [
+ 
 
 ## :rocket:  Tecnologias utilizadas
 Esse projeto foi desenvolvido com as seguintes tecnologias:
