@@ -36,8 +36,8 @@
                 <img :src="recipe.image" alt="Imagem da receita" class="w-full h-40 object-cover rounded-lg" />
               </div>
 
-              <div class="flex flex-col justify-between p-2">
-                <h2 class="text-xl font-bold">{{ recipe.name }}</h2>
+              <div class="flex flex-col justify-between p-2 ">
+                <h2 class="lg:text-xl text-lg font-bold">{{ recipe.name }}</h2>
                 <p>Tempo de preparo: {{ recipe.prepTimeMinutes }} min</p>
                 <p>Tempo de cozimento: {{ recipe.cookTimeMinutes }} min</p>
                 <p>Dificuldade: {{ recipe.difficulty }}</p>
@@ -59,11 +59,11 @@
                   <img :src="recipe.image" alt="Imagem da receita" class="w-full h-48 object-cover rounded-lg" />
                 </div>
 
-                <div class="flex flex-col justify-between ">
-                  <DialogTitle class="text-2xl font-bold ">
+                <div class="flex flex-col justify-between">
+                  <DialogTitle class="lg:text-2xl text-lg font-bold ">
                     {{ recipe.name }}
                   </DialogTitle>
-                  <div class="space-y-2">
+                  <div class=" space-y-5">
                     <div class="flex gap-2 items-center">
                       <p>Porções:</p>
                       <div class="flex">
@@ -80,15 +80,15 @@
 
                 <div class="lg:col-span-2">
                   <DialogDescription class="text-gray-700">
-                    <h3 class="text-xl font-semibold mb-2">Ingredientes:</h3>
-                    <ol class="list-decimal pl-5 mb-4">
+                    <h3>Ingredientes:</h3>
+                    <ol>
                       <li v-for="(ingredient, index) in recipe.ingredients" :key="ingredient">
                         {{ index + 1 }}. {{ ingredient }}
                       </li>
                     </ol>
 
-                    <h3 class="text-xl font-semibold mb-2">Instruções:</h3>
-                    <ol class="list-decimal pl-5">
+                    <h3>Instruções:</h3>
+                    <ol>
                       <li v-for="(step, index) in recipe.instructions" :key="index" class="mb-2">
                         {{ index + 1 }}. {{ step }}
                       </li>
@@ -114,7 +114,12 @@ p,
 h2 {
   @apply text-blue-600;
 }
-
+h3 {
+  @apply text-blue-600 font-semibold lg:text-xl text-lg mb-2 ; 
+}
+ol{
+  @apply list-decimal pl-5 mb-4;
+}
 .tag {
   @apply inline-block bg-gray-200 rounded-md px-3 py-1 text-blue-600 text-sm font-medium mr-2;
 }
