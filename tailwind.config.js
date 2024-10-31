@@ -18,12 +18,10 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
         sans: ["Poppins", ...defaultTheme.fontFamily.sans]
        },
-       backgroundSize: {
-        '37': '37rem',
-      },
       colors:{
-        'esmerald':{
-          DEFAULT:'#007c74',
+        'blue':{
+          DEFAULT:'#317ef2',
+          600: '#0d114f',
         },
       }
     },

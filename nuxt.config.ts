@@ -12,5 +12,5 @@ export default defineNuxtConfig({
   components: true,
   css: ["normalize.css/normalize.css", "@/assets/css/tailwind.css"],
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts','radix-vue/nuxt'],
 })
