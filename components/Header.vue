@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto my-8 px-4">
-    <div class="flex justify-between items-center mb-4 px-5">
-      <h1 class="text-3xl text-blue-600 font-bold">{{ title }}</h1>
+  <div class="container mx-auto my-8 lg:px-4">
+    <div class="flex justify-between items-center mb-4 lg:px-5">
+      <h1 class="lg:text-3xl text-lg  text-blue-600 font-bold">{{ title }}</h1>
       <div class="flex space-x-4">
         <NuxtLink to="/recipes">
           <Buttons :variant="currentRoute === '/recipes' ? 'secondary' : 'primary'">
